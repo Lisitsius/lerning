@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content_left">
+            <div class="header">
+                <div class="header_navigation"><a href="../index.html">Главная</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../teori.html">Теория</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../tests.html">Тесты</a></div>
+                <div class="block_right"><h1> Анимация текста</h1></div>
+            </div>
+            
+            <div class="block_teorii">
+                <div class="zagolovok_teorii"></div>
+                <div class="blok_yroka">
+                    <b><p>Чаще это эстетическая анимация: текст каким-то нестандартным образом появляется на экране:</p></b><br><br>
+                    <ul>
+                        <li>побуквенно (эффект печатной машинки),</li>
+                        <li>из невидимости,</li>
+                        <li>появление снизу вверх или слева направо,</li>
+                        <li>с искажением или поворотом.</li>
+                    </ul><br><br>
+                    <p>Используется для эстетики на сайте, передачи эмоций либо темпа повествования, а также создания акцента. Так контент будет интереснее воспринимать, внимание пользователя не будет рассеиваться на всём сайте, но сохранится на тексте. По мере прокрутки сайта, за счёт последовательного появления информации, глаза пользователя по этим акцентам будут идти ровно также — последовательно. </p>
+                    <br><p class="text_anim" data-text="Эффект появления привлекает дополнительное внимание пользователя к тексту, заголовку, повышает дочитываемость.">Эффект появления привлекает дополнительное внимание пользователя к тексту, заголовку, повышает дочитываемость.</p>
+                    <p>Как такое сделать? Сейчас я вам покажу</p>
+                    <br>
+                    <div class="kod"><pre>
+                        &lt;p class="text_anim" data-text="Эффект появления привлекает дополнительное внимание пользователя
+                        к тексту, заголовку, повышает дочитываемость."&gt;
+                        Эффект появления привлекает дополнительное внимание пользователя к тексту, заголовку, повышает
+                        дочитываемость.&lt;/p&gt;
+                    </pre></div><br>
+                    <p>Начнем с тега &lt;р&gt; который используется для обозночения параграфа</p>
+                    <p>Зададим класс и добавим атрибут 'data-text' копируя в него текст из параграфа</p>
+                    <br>
+                    <div class="kod"><pre>
+                        .text_anim{
+                            position: relative;
+                            color: black;
+                          }
+                    </pre></div><br>
+                    <p>В классе прописываем свойтсво 'position' которая указывает, как элемент позиционируется в документе, а со значением 'relative' элемент позиционируется в соответствии с нормальным потоком документа, а затем смещается относительно себя на основе значений top, right, bottom и left</p>
+                    <p>И цвет текста делаем черным</p>
+                    <br>
+                    <div class="kod"><pre>
+                        .text_anim::before{
+                            content: attr(data-text);
+                            position: absolute;
+                            color: white;
+                            width: 5px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            border-right: 3px solid white;
+                            animation: animate 12s linear infinite;
+                          }
+                    </pre></div><br>
+                    <p>Создадим такой-же класс с псевдоклассом 'before', напишем свойство 'content' со значением 'attr(data-text)'</p>
+                    <p>Прописываем свойтсво 'position' только теперь со значением 'absolute' Элемент удаляется из обычного потока документа, и для элемента в макете страницы не выделяется дополнительное пространство</p>
+                    <br>
+                    <p>Свойство white-space определяет, как обрабатывается пробелы внутри элемента и со значением nowrap cворачивает пробелы, но подавляет разрывы строк (перенос текста) внутри источника</p>
+                    <p>Задаем размер и цвет для правой границы</p>
+                    <p>Также создаем анимацию: придумываем имя, продолжительность анимации, и количество повтора(infinite-бесконечность)</p>
+                    <br>
+                    <div class="kod"><pre>
+                        @keyframes animate{
+                            0%{
+                                width: 0;
+                            }
+                          100%{
+                            width: 100%;
+                          }}
+                    </pre></div><br>
+                    <p>И завершаем написанием @keyframes </p>
+                </div>
+                
+            </div>
+            <div class="buttons_teors">
+                <a href="teor2.html"><div class="bat">Предыдущий урок</div></a>
+                <a href="../tests/test2.html"><div class="bat2">Тестирование</div></a>
+                <a href="teor4.html"> <div class="bat">Следующий урок</div></a>
+            </div>
+        </div>
+       
+    </div>
+    <div class="cursor"></div>
+                    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px;"+" top: " + e.clientY + "px;";
+        });
+     </script>
+</body>
+</html>

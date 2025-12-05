@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/teoria.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <title>Document</title>
+</head>
+<body class="" style="background-color: #080D19;">
+  <nav class="navbar navbar-expand-lg position-fixed w-100 ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <img src="img/logo.png" alt="">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Теория
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="teori.html">Все уроки</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Тесты
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="test.html">Все тесты</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="anired.html">Онлайн редактор</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav> 
+  <div class="d-flex flex-row  mt Playfair " >
+    <div class="position-fixed S d-none d-xl-block">
+      <div class="overflow-y-auto tm">
+      <nav id="navbar-example3" class="h-10 flex-column align-items-stretch pe-4 ">
+        <nav class="nav nav-pills flex-column " >
+          <a class="nav-link" href="#item-0">@keyframes</a>
+          <a class="nav-link" href="#item-1-1">animation</a>
+          
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-1-1">animation-name</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-2">animation-duration</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-3">animation-iteration-count</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-4">animation-direction</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-5">animation-timing-function</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-6">animation-delay</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-7">animation-play-state</a>
+            <a class="nav-link ms-3 my-1" href="#item-1-8">animation</a>
+          </nav>
+          <a class="nav-link" href="#item-2">perspective</a>
+          <a class="nav-link" href="#item-3">transform</a>
+          <a class="nav-link" href="#item-4">Transition</a>
+          <a class="nav-link" href="#item-5">Функции CSS-трансформации</a>
+
+
+          <a class="nav-link" href="#item-5">Практические задания</a>
+            <nav class="nav nav-pills flex-column">
+            <a class="nav-link ms-3 my-1" href="#item-3-1">Фоновые объекты</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Анимация текста</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Parallax</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Интерактивные кнопки</a>
+            <a class="nav-link ms-3 my-1" href="#item-3-2">Интерактивные картинки</a>
+           
+          </nav>
+          
+        </nav>
+      </nav>
+    </div>
+    </div>
+    <div class="col-2 d-none d-xl-block"></div>
+    <div class="col-12 col-xl-10">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+
+        <div id="item-0" class="yrok">
+            <div class="container">
+              <h1>@keyframes</h1>
+              <p>Что из себя представляет любая анимация? Это переход от одного состояния элемента к другому состоянию используя ключевые кадры.</p>
+              <p>Ключевой кадр это свойства элемента (прозрачность, цвет, положение и др.), которые должны применяться к элементу в заданный 
+                момент времени. Таким образом, анимация представляет собой плавный переход стилевых свойств от одного ключевого кадра к другому.
+                 Вычисление промежуточных значений между такими кадрами берёт на себя браузер.</p>
+                 <p>Представим, что у нас есть два блока: круг и квадрат. Мы хотим написать анимацию так, чтобы круг
+                   превращался в квадрат, а квадрат превращался в круг.</p>
+                   <div class="pokaz w-40 overflow-y-auto">
+                    <div class="row justify-content-center">
+                    <div class="col-6 col-lg-3 ">
+                    <div class="circle"></div></div>
+                    <div class="w-100 ss	d-block d-sm-none"></div>
+                    <div class="col-6 col-lg-3">
+                      <div class="square"></div></div></div>
+                  </div>
+              <p>Чтобы превратить розовый круг в квадрат, нам нужно будет поменять три свойства: width, height и border-radius.</p>
+              <p>Чтобы прописать ключевые кадры, используем директиву @keyframes:</p>
+              <div class="kod"><pre id="1.1"><code>
+        @keyframes circle-to-square &#123;
+            from &#123;
+              width &#58; 150px &#59;
+              height &#58; 150px &#59;
+              border-radius &#58; 100px &#59;
+            &#125;
+            to &#123;
+               width &#58; 200px &#59;
+              height &#58; 200px &#59;
+               border-radius &#58; 10px &#59;
+            &#125;
+         &#125;    
+              </code></pre>
+              <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.1')" title="Copy"></div>
+            </div><br>
+            <p>После ключевого слова @keyframes мы должны написать имя анимации. Оно понадобится нам, чтобы связать анимацию для
+               конкретного элемента с ключевыми кадрами. Желательно, чтобы имя анимации было уникальным.</p>
+              <p>Ключевые кадры могут прописываться при помощи ключевых слов from (начальный кадр) и to (конечный кадр). Это удобно, если у вас всего два ключевых кадра. Если же кадров больше двух, то можно использовать проценты.
+
+                Добавим нашей анимации промежуточный шаг, когда наш круг будет  прямоугольной формой:</p>
+                <div class="kod"><pre id="1.2"><code>
+           @keyframes circle-to-square &#123;
+              from &#123;
+                width &#58; 150px &#59;
+                height &#58; 150px &#59;
+                border-radius &#58; 100px &#59;
+               &#125;
+               50% &#123;
+               width &#58; 150px &#59;
+              height &#58; 200px &#59;
+              border-radius &#58; 10px &#59;
+             &#125;
+               to &#123;
+                width &#58; 200px &#59;
+                height &#58; 200px &#59;
+                 border-radius &#58; 10px &#59;
+              &#125;
+          &#125;    
+                </code></pre>
+                <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.2')" title="Copy"></div>
+              </div><br>
+              <p>Браузер расшифровывает ключевое слово from как 0%, а ключевое слово to как 100%.</p>
+              <div class="pokaz w-40 overflow-y-auto">
+                <div class="row justify-content-center">
+                <div class="col-6 col-lg-3 ">
+                <div class="circle"></div></div>
+                <div class="w-100 ss	d-block d-sm-none"></div>
+                <div class="col-6 col-lg-3">
+                  <div class="square"></div></div></div>
+              </div>
+              <p>Мы прописали ключевые кадры анимации, но пока ничего не происходит </p>
+              <p>Чтобы анимация начала проигрываться, нам нужно присвоить её какому-то элементу, 
+                чтобы браузер понимал, какой элемент на странице анимировать.</p>
+            </div>     
+        </div>
+        
+        <div id="item-1-1" class="yrok">
+          <div class="container">
+            <h1>animation-name</h1>
+            <p>Для присвоения анимации элементу нужно имя, которое мы задали.</p>
+            <div class="kod"><pre id="1.3"><code>
+      .circle circle-to-square &#123;
+        animation-name &#58; circle-to-square &#59;
+       &#125;    
+            </code></pre>
+            <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.3')" title="Copy"></div>
+          </div><br>
+          <p>Теперь браузер знает, что ключевые кадры анимации с названием circle-to-square должны применяться к элементу с классом circle.</p>
+          <p>Кроме имени анимации можно указать none, значение по умолчанию. Означает отсутствие анимации. Удобно использовать для сброса анимации.</p>
+        <p>Например, можно указать это значение для элемента по наведению на него:</p>
+        <div class="kod"><pre id="1.4"><code>
+          .element &#123;
+            animation &#58; name &#59;
+           &#125;
+           .element&#58;hover  &#123;
+            animation &#58; none &#59;
+           &#125;      
+                </code></pre>
+                <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.4')" title="Copy"></div>
+              </div><br>
+<p>Но анимация всё ещё не работает! Потому что браузер не знает, за какое время нужно изменять свойства элемента.</p>
+
+
+
+
+        </div></div>
+        <div id="item-1-2" class="yrok">
+          <div class="container">
+          <h1>animation-direction</h1>
+          <p>Задаёт время в секундах или миллисекундах, сколько должен длиться один цикл анимации. По умолчанию 
+            значение равно 0s, это означает, что никакой анимации нет.</p>
+    <p>Отрицательные значения и значения без указания единиц времени (s или ms) недопустимы и будут игнорироваться.</p>
+    <div class="kod"><pre id="1.5 "><code>
+      .circle  &#123;
+        animation-name &#58; circle-to-square &#59;
+        animation-duration &#58; 5s &#59;
+      &#125;    
+            </code></pre>
+            <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.5')" title="Copy"></div>
+          </div><br>
+          <div class="pokaz w-40 overflow-y-auto">
+            <div class="row justify-content-center">
+            <div class="col-6 col-lg-3 ">
+            <div class="circle2"></div></div>
+            <div class="w-100 ss	d-block d-sm-none"></div>
+            <div class="col-6 col-lg-3">
+              <div class="square"></div></div></div>
+          </div>
+<p>Ура! Анимация проигрывается! Но только один раз...
+   Есть вероятность, что пользователь просто не увидит анимации — она закончится раньше, чем он доскроллит до этого места страницы.</p>
+   <p>Перезагрузите страницу</p>
+   <div class="d-flex justify-content-end"><a href="tests/test1.html"><button class="b2 button">Пройти тест</button></a><div>&nbsp;&nbsp;&nbsp;&nbsp;</div></div>
+
+
+        </div></div>
+        
+
+        <div id="item-1-3" class="yrok">
+          <div class="container">
+          <h1>animation-iteration-count</h1>
+<p>При помощи свойства animation-iteration-count можно указать, сколько раз анимация будет проигрываться.</p>
+<p>В качестве значения указывается число, означающее количество повторений, или ключевое слово infinite. Если
+   указано infinite, то анимация будет повторяться бесконечно. Это значение встречается чаще всего!</p>
+   <div class="kod"><pre id="1.6 "><code>
+    .circle  &#123;
+      animation-name &#58; circle-to-square &#59;
+      animation-duration &#58; 5s &#59;
+      animation-iteration-count &#58; infinite &#59;
+    &#125;    
+          </code></pre>
+          <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.6')" title="Copy"></div>
+        </div><br>
+        <div class="pokaz w-40 overflow-y-auto">
+          <div class="row justify-content-center">
+          <div class="col-6 col-lg-3 ">
+          <div class="circle3"></div></div>
+          <div class="w-100 ss	d-block d-sm-none"></div>
+          <div class="col-6 col-lg-3">
+            <div class="square"></div></div></div>
+        </div>
+        <p>Теперь анимация проигрывается постоянно, но вы наверняка видите, что после последнего кадра происходит
+           резкий скачок к исходному состоянию.</p>
+
+          </div></div>
+
+          <div id="item-1-4" class="yrok">
+            <div class="container">
+            <h1>animation-direction</h1>
+  <p>Свойство animation-direction сообщает браузеру, должна ли анимация проигрываться в обратном порядке.</p>
+  <p>Доступные значения:
+    <ul>
+   <li> normal — значение по умолчанию, анимация воспроизводится от начала до конца, после чего возвращается к начальному кадру.</li>
+   <li> reverse — анимация проигрывается в обратном порядке, от последнего ключевого кадра до первого, после чего возвращается к последнему кадру.</li>
+   <li> alternate — каждый нечётный повтор (первый, третий, пятый) анимации воспроизводится в прямом порядке, а каждый чётный повтор (второй, четвёртый, шестой) анимации воспроизводится в обратном порядке.</li>
+   <li> alternate-reverse — аналогично значению alternate, но чётные и нечётные повторы меняются местами.</li>
+  </ul></p>
+     <div class="kod"><pre id="1.7 "><code>
+      .circle &#123;
+        animation-name &#58; circle-to-square &#59;
+        animation-duration &#58; 5s &#59;
+        animation-iteration-count &#58; infinite &#59;
+        animation-direction &#58; alternate &#59;
+      &#125;    
+            </code></pre>
+            <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.7')" title="Copy"></div>
+          </div><br>
+          <div class="pokaz w-40 overflow-y-auto">
+            <div class="row justify-content-center">
+            <div class="col-6 col-lg-3 ">
+            <div class="circle4"></div></div>
+            <div class="w-100 ss	d-block d-sm-none"></div>
+            <div class="col-6 col-lg-3">
+              <div class="square"></div></div></div>
+          </div>
+          <p>Теперь анимация красиво проигрывается. Круг плавно становится квадратом, а потом снова плавно превращается в круг.</p>
+  
+            </div></div>
+
+            <div id="item-1-5" class="yrok">
+              <div class="container">
+              <h1>animation-timing-function</h1>
+<p>Анимации пришли в веб в попытке стереть границу между реальным миром и компьютерным. В реальном мире вещи не меняют свои свойства
+   мгновенно. Мячик перемещается из вашей руки на пол не моментально, а плавно меняя свою позицию в пространстве.</p>
+<p>CSS-анимации по умолчанию проигрываются линейно, меняя свойства элемента на равные доли в равные промежутки времени. Такое поведение
+   редко встречается в реальной жизни. Тот же мячик начинает своё движение медленно и со временем ускоряется.</p>
+<p>При помощи свойства animation-timing-function можно задать, как будет развиваться анимация между ключевыми кадрами: равномерно, 
+  или сначала быстро, потом медленно, или по каким-то сложным внутренним законам.</p>
+
+<h2>linear</h2>
+<p>Анимация проигрывается равномерно, без колебаний скорости.</p>
+
+<h2>ease</h2>
+<p>Значение по умолчанию. Анимация начинается медленно, затем быстро разгоняется и снова замедляется к концу.</p>
+
+<h2>ease-in</h2>
+<p>Анимация начинается медленно и плавно ускоряется к концу.</p>
+
+<h2>ease-out</h2>
+<p>Анимация начинается быстро и плавно замедляется к концу.</p>
+
+<h2>ease-in-out</h2>
+<p>Анимация начинается и заканчивается медленно, ускоряясь в середине.</p>
+
+<h2>cubic-bezier(x1, y1, x2, y2)</h2>
+<p>Временная функция, описывающая тип ускорения в виде кривой Безье.</p>
+<img src="img/bez.jpg" class="delete">
+<p>По оси x располагается временная шкала анимации, а по оси y — прогресс анимации.
+   Это очень мощный инструмент для создания разнообразных анимаций со сложными внутренними законами.</p>
+<p>Значения x1 и x2 должны находиться в диапазоне от 0 до 1 включительно. Задавая значения y1 и y2 меньше
+   0 или больше 1, можно добиться эффекта пружины.</p>
+<p>Редко когда разработчики пишут эту функцию из головы. Чаще всего используется инструмент визуализации, 
+  позволяющий изменять значения и сразу видеть, как будет выглядеть анимация.</p>
+<p>Один из самых популярных инструментов —<a href="https://cubic-bezier.com/"> cubic-bezier.com.</a></p>
+
+<h2>step-start</h2>
+<p>Задаёт пошаговую анимацию, разбивая её на отрезки, изменения происходят в начале каждого шага.</p>
+
+<h2>step-end</h2>
+<p>Пошаговая анимация, изменения происходят в конце каждого шага.</p>
+
+<h2>steps(количество шагов, положение шага)</h2>
+<p>Функция, указывающая, что анимация должна воспроизводиться шагами, резко переходя от одного состояния к другому.</p>
+<p>Первый параметр указывает, на сколько отрезков нужно разбить анимацию. Значением должно быть целое положительное число больше 0.</p>
+<p>Второй параметр является необязательным и указывает позицию шага, момент, когда начинается анимация. Возможные значения:
+  <ul>
+  <li> jump-start — первый шаг происходит при значении 0.</li>
+  <li> jump-end — последний шаг происходит при значении 1.</li>
+  <li> jump-none — все шаги происходят в пределах от 0 до 1 включительно.</li>
+  <li> jump-both — первый шаг происходит при значении 0, последний — при значении 1.</li>
+  <li> start — ведёт себя как jump-start.</li>
+  <li> end — ведёт себя как jump-end.</li>
+
+ </ul>
+</p>
+<p>Со значением start анимация начинается в начале каждого шага, со значением end — в конце каждого шага с задержкой. Задержка 
+  вычисляется как результат деления времени анимации на количество шагов. Если второй параметр не указан, используется значение 
+  по умолчанию end.</p>
+  <p>Очень сложно представить, как же будет выглядеть анимация при каждом из этих значений. Гораздо информативнее на машинках:</p>
+
+
+
+
+
+  <p>Вернёмся к нашему кругу и укажем, что он должен превращаться в квадрат нелинейно, медленно разгоняясь к концу анимации.</p>
+  <div class="kod"><pre id="1.8"><code>
+    .circle  &#123;
+      animation-name &#58; circle-to-square &#59;
+      animation-duration &#58; 5s &#59;
+      animation-iteration-count &#58; infinite &#59;
+      animation-direction &#58; alternate &#59;
+      animation-timing-function &#58; ease-in &#59;
+    &#125;    
+          </code></pre>
+          <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.8')" title="Copy"></div>
+        </div><br>
+        <div class="pokaz w-40 overflow-y-auto">
+          <div class="row justify-content-center">
+          <div class="col-6 col-lg-3 ">
+          <div class="circle5"></div></div>
+          <div class="w-100 ss	d-block d-sm-none"></div>
+          <div class="col-6 col-lg-3">
+            <div class="square"></div></div></div>
+        </div>
+<p>Анимация стала более естественной, не такой компьютерной.</p>
+<p>Пришло время заняться правой фигурой и превратить синий квадрат в розовый круг. 
+  Используем практически те же самые свойства, что и для круга, только зададим другое 
+  значение для свойства animation-direction, чтобы шаги анимации воспроизводились в обратном порядке:</p>
+  <div class="kod"><pre id="1.9 "><code>
+    .square  &#123;
+      animation-name &#58; circle-to-square &#59;
+      animation-duration &#58; 5s &#59;
+      animation-iteration-count &#58; infinite &#59;
+      animation-direction &#58; alternate-revers &#59;
+      animation-timing-function &#58; ease-in &#59;
+    &#125;    
+          </code></pre>
+          <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.9')" title="Copy"></div>
+        </div><br>
+
+        <div class="pokaz w-40 overflow-y-auto">
+          <div class="row justify-content-center">
+          <div class="col-6 col-lg-3 ">
+          <div class="circle5"></div></div>
+          <div class="w-100 ss	d-block d-sm-none"></div>
+          <div class="col-6 col-lg-3">
+            <div class="square2"></div></div></div>
+        </div>
+<p>Сейчас обе фигуры меняются синхронно. Добавим правой фигуре небольшую задержку.</p>
+
+              </div></div>
+
+
+
+              <div id="item-1-6" class="yrok">
+                <div class="container">
+                <h1>animation-delay</h1>
+<p>Свойство задаёт задержку воспроизведения анимации. Значением может быть любое число, как отрицательное, так и положительное.</p>
+<p>Если значение положительное, то будет задержка перед началом анимации. Если значение отрицательное, то анимация начнётся как бы за кадром.</p>
+<p>Пусть анимация правого элемента начнётся с задержкой -2.5 секунды. Так она будет начинаться с середины:</p>
+<div class="kod"><pre id="1.10 "><code>
+  .square &#123;
+    animation-name &#58; circle-to-square &#59;
+    animation-duration &#58; 5s &#59;
+    animation-iteration-count &#58; infinite &#59;
+    animation-direction &#58; alternate-revers &#59;
+    animation-timing-function &#58; ease-in &#59;
+    animation-delay &#58; -2.5s &#59;
+  &#125;    
+        </code></pre>
+        <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.10')" title="Copy"></div>
+      </div><br>
+
+      <div class="pokaz w-40 overflow-y-auto">
+        <div class="row justify-content-center">
+        <div class="col-6 col-lg-3 ">
+        <div class="circle5"></div></div>
+        <div class="w-100 ss	d-block d-sm-none"></div>
+        <div class="col-6 col-lg-3">
+          <div class="square3"></div></div></div>
+      </div>
+
+
+                </div></div>
+
+
+                <div id="item-1-7" class="yrok">
+                  <div class="container">
+                  <h1>animation-play-state</h1>
+<p>Свойство, позволяющее ставить анимацию на паузу и запускать снова.</p>
+<p>Доступные значения:
+<ul>
+ <li>running — анимация проигрывается (значение по умолчанию).</li>
+ <li>paused — анимация ставится на паузу. При повторном запуске анимации она продолжается с того места, где была остановлена.</li> 
+  </ul>
+  Добавим возможность взаимодействовать с нашей анимацией. Пусть по наведению курсора анимация ставится на паузу, а если курсор убран, то продолжает проигрываться.</p>
+  <div class="kod"><pre id="1.11 "><code>
+    .circle &#58; hover &#123;
+    animation-play-state &#58; paused &#59;
+    &#125;   
+    .square &#58; hover &#123;
+    animation-play-state &#58; paused &#59;
+    &#125;    
+          </code></pre>
+          <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.11')" title="Copy"></div>
+        </div><br>
+        <div class="pokaz w-40 overflow-y-auto">
+          <div class="row justify-content-center">
+          <div class="col-6 col-lg-3 ">
+          <div class="circle5 paus"></div></div>
+          <div class="w-100 ss	d-block d-sm-none"></div>
+          <div class="col-6 col-lg-3">
+            <div class="square3 paus "></div></div></div>
+        </div>
+                  </div></div>
+
+
+                  <div id="item-1-8" class="yrok">
+                    <div class="container">
+                    <h1>animation</h1>
+<p>animation — это мега-шорткат, в котором можно за раз указать значения для всех перечисленных выше свойств, начинающихся на animation-.</p>
+<p>Значения указываются через пробел. Порядок указания значений не важен. Из-за того, что значения этих свойств очень разные, браузер сам 
+  догадывается, какое значение к какому свойству относится. Важно только помнить, что первое значение времени будет воспринято как значение 
+  animation-duration (длительность анимации), а второе — animation-delay (задержка воспроизведения).</p>
+  <p>Для работы анимации совсем не обязательно перечислять все значения. Достаточно указать имя анимации и её длительность. 
+    Для остальных свойств будут установлены значения по умолчанию.</p>
+
+    <div class="kod"><pre id="1.12 "><code>
+      .element  &#123;
+      animation &#58; circle-to-square 2s infinite alternate-reverse ease-in 1s  &#59;
+      &#125;   
+       
+            </code></pre>
+            <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.12')" title="Copy"></div>
+          </div><br>
+                    </div></div>
+
+<br><br>
+
+<div id="item-2" class="yrok">
+  <div class="container">
+  <h1>perspective</h1>
+<p>Свойство perspective определяет расстояние от пользователя до задней стенки экрана по оси z.
+   Таким образом можно придать глубину элементу, к которому применяется свойство transform. 
+   Эффект заметен только при 3D-трансформациях.</p>
+   <p>Свойство perspective влияет на вложенные элементы контейнера, для которого указано, а не на сам контейнер.</p>
+<p>Значение по умолчанию — none. Оно отменяет перспективу.</p>
+<p>Значением может быть положительное число в доступных единицах измерения.</p>
+<p>С применением свойства perspective и свойства transform элемент может отображаться по-разному.</p>
+<div class="kod"><pre id="1.13"><code>
+  .perspective-50 &#123;
+    perspective &#58; 50px &#59;
+  &#125; 
+  .perspective-100 &#123;
+    perspective &#58; 100px &#59;
+  &#125; 
+  .transform-rotate-x &#123;
+    background-color &#58; orange &#59;
+    transform &#58; rotateX(50deg) &#59;
+  &#125;
+  .transform-rotate-y &#123;
+    background-color &#58; blue &#59;
+    transform &#58; rotateY(20deg) &#59;
+  &#125;  
+   
+        </code></pre>
+        <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.13')" title="Copy"></div>
+      </div><br>
+
+      <div class="kod"><pre id="1.14 "><code>
+
+        &lt;div class="parent perspective-50"&gt;
+          &lt;div class="transform-rotate-x"&gt;
+            Перспектива 50 градусов по x
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="parent perspective-100"&gt;
+          &lt;div class="transform-rotate-y"&gt;
+            Перспектива 20 градусов по y
+          &lt;/div&gt;
+        &lt;/div&gt;
+         
+              </code></pre>
+              <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.14')" title="Copy"></div>
+            </div><br>
+
+            <div class="pokaz d-flex flex-column justify-content-center align-items-center">
+              
+              
+              <div class="parent perspective-50">
+               <div class="transform-rotate-x">
+                 Перспектива 50 градусов по <i>x</i>
+               </div>
+</div> 
+<div class="w-100 ss	"></div>
+              
+                <div class="parent perspective-100">
+                  <div class="transform-rotate-y">
+                    Перспектива 20 градусов по <i>y</i>
+                  </div>
+                </div>
+            </div>
+
+  </div></div>
+  <br><br>
+  <div id="item-3" class="yrok">
+    <div class="container">
+    <h1>transform</h1>
+<p>Свойство transform используем, когда нам нужно применить к
+   элементу какие-либо трансформации: искажение, поворот, смещение, масштабирование.</p>
+<h2>Пример</h2>
+<p>Смещаем визуальное представление элемента на 120 пикселей вправо:</p>
+<div class="kod"><pre id="1.15 "><code>
+  .selector &#123;
+    transform &#58; translateX(120px) &#59;
+  &#125;  
+   
+        </code></pre>
+        <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.15')" title="Copy"></div>
+      </div><br>
+<h2>Несколько значений:</h2>
+<div class="kod"><pre id="1.16 "><code>
+  .selector &#123;
+    transform &#58; perspective(500px) translate(10px, 0, 20px) rotateY(3deg) &#59;
+  &#125;  
+   
+        </code></pre>
+        <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.16')" title="Copy"></div>
+      </div><br>
+      <p>Часто бывает необходимо каким-то образом трансформировать визуальное представление элемента (масштабировать, повернуть, переместить) 
+        и при этом никак не затронуть соседние элементы в документе. Для подобных преобразований используется свойство transform. В качестве 
+        значения выступают различные функции трансформации: rotate, translate, scale, skew.</p>
+<p>Подробно о функциях, которые можно указывать в качестве значения, написано в статье <a href="#item-5">«Функции CSS-трансформации»</a>.</p>
+<p>Стоит обратить особое внимание на тот факт, что трансформируемый элемент при трансформациях никак не взаимодействует с соседними элементами. 
+  Он как бы «приподнимается» над остальным содержимым. При этом он не уходит из потока документа, и остальные элементы располагаются так, как 
+  располагались до применения трансформаций.</p>
+  <p>Трансформировать можно только трансформируемые элементы. Звучит как «масло масляное», но на странице существуют определённые типы элементов,
+     к которым не применима стандартная блочная модель. Нельзя трансформировать строчные и табличные элементы.</p>
+     <p>Если среди значений есть функция perspective(), то она должна быть первой среди всех значений:</p>
+<br>
+<p>Неправильно:</p>
+     <div class="kod"><pre id="1.17 "><code>
+      .selector &#123;
+        transform &#58; translate(10px, 0, 20px) rotateY(3deg) perspective(500px) &#59;
+      &#125;  
+            </code></pre>
+            <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.17')" title="Copy"></div>
+          </div><br>
+          <p>Правильно:</p>
+          <div class="kod"><pre id="1.18 "><code>
+           .selector &#123;
+             transform &#58;perspective(500px) translate(10px, 0, 20px) rotateY(3deg)&#59;
+           &#125;  
+                 </code></pre>
+                 <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.18')" title="Copy"></div>
+               </div><br>
+<p>Можно применять трансформации сразу к нескольким осям, используя сокращённые функции:</p>
+<div class="kod"><pre id="1.19 "><code>
+           .selector &#123;
+              transform &#58;translateX(10px) translateY(0) translateZ(20px)&#59;
+            &#125;  
+        </code></pre>
+        <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.19')" title="Copy"></div>
+      </div><br>
+    <p>Или можно использовать одну функцию translate, указав значение для всех трёх осей:</p>
+<div class="kod"><pre id="1.20"><code>
+           .selector &#123;
+             transform &#58;translateX(10px) translateY(0) translateZ(20px)&#59;
+           &#125;  
+        </code></pre>
+        <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.20')" title="Copy"></div>
+      </div><br>
+
+
+    </div></div>
+
+
+
+
+
+<div id="item-4" class="yrok">
+  <div class="container">
+  <h1>transition</h1>
+    <p>Свойство transition используется, когда нам нужно плавно изменить CSS-свойства между двумя состояниями 
+      элемента. Например, при наведении мышкой.</p>
+      <div class="pokaz2 d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex justify-content-evenly w-75">
+          <div class=" ">без transition</div>
+          <div class=" "><a class="dtr disabled">Наведи на меня</a></div>
+        </div>
+        <div class="d-flex justify-content-evenly w-75">
+          <div class=" ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c transition</div>
+          <div class=" "><a class="tr disabled">Наведи на меня</a></div>
+        </div>
+      </div>
+      <p>Свойство transition это шорткат. Как, например, margin или background. Оно включает в себя несколько подсвойств:
+<ul>
+  <li>transition-duration — длительность перехода;</li>
+  <li>transition-timing-function — функция, описывающая скорость изменения свойства;</li>
+  <li>transition-delay — задержка перед началом изменения.</li>
+  <li>transition-property — указываем свойство, которое хотим плавно изменить;</li>
+</ul>
+
+      </p>
+      <h2>Как записывается</h2>
+      <p>Применить к одному свойству:</p>
+      <ul>
+        <li>Порядок записи: имя свойства | длительность:</li>
+      </ul>
+      <div class="kod"><pre id="1.21"><code>
+        .selector &#123;
+          transition &#58;transform 4s&#59;
+        &#125;  
+     </code></pre>
+     <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.21')" title="Copy"></div>
+   </div><br>
+      <ul>
+        <li>Порядок записи: имя свойства | длительность | задержка:</li>
+      </ul>
+      <div class="kod"><pre id="1.22"><code>
+        .selector &#123;
+          transition &#58;transform 4s 1s&#59;
+        &#125;  
+     </code></pre>
+     <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.22')" title="Copy"></div>
+   </div><br>
+   <ul>
+    <li>Порядок записи: имя свойства | длительность | временная функция | задержка:</li>
+  </ul>
+
+   <div class="kod"><pre id="1.23"><code>
+        .selector &#123;
+          transition &#58;transform 4s ease-in-out 1s&#59;
+        &#125;  
+     </code></pre>
+     <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.23')" title="Copy"></div>
+   </div><br>
+       <p>Применить к двум свойствам:</p>
+       <div class="kod"><pre id="1.24"><code>
+        .selector &#123;
+          transition &#58;transform 4s, color 1s&#59;
+        &#125;  
+     </code></pre>
+     <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.24')" title="Copy"></div>
+   </div><br>
+      <p>Применить ко всем свойствам, которые будут меняться:</p>
+      <div class="kod"><pre id="1.25"><code>
+        .selector &#123;
+          transition &#58;all 0.5s ease-out&#59;
+        &#125;  
+     </code></pre>
+     <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.25')" title="Copy"></div>
+   </div><br>
+
+
+   <h2>Пример</h2>
+   <p>Предположим, у нас есть кнопка, у которой мы хотим изменить фон при наведении мышкой.</p>
+   <div class="kod"><pre id="1.26"><code>
+        &lt;button class="button"&gt;Кнопка&lt;/button&gt;
+ </code></pre>
+ <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.26')" title="Copy"></div>
+</div><br>
+<p>Тогда можно сказать, что у кнопки есть два состояния:</p>
+<ol>
+  <li>Базовое состояние, когда мышка не над кнопкой.</li>
+  <li>Состояние при наведении курсора мыши (ховер-состояние).</li>
+</ol>
+<p>Стили для базового состояния:</p>
+<div class="kod"><pre id="1.27"><code>
+        .button {
+          background-color: blue;
+        }
+ </code></pre>
+ <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.27')" title="Copy"></div>
+</div><br>
+<p>Стили для ховер-состояния:</p>
+<div class="kod"><pre id="1.28"><code>
+        .button:hover {
+          background-color: white;
+        }
+ </code></pre>
+ <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.28')" title="Copy"></div>
+</div><br>
+<p>Чтобы при наведении фон кнопки изменялся не скачком, а плавно, мы используем свойство transition для плавного изменения цвета фона.</p>
+<p>Стили для базового состояния:</p>
+<div class="kod"><pre id="1.29"><code>
+        .button {
+          background-color: blue;
+          transition: background-color 0.6s;
+        }
+ </code></pre>
+ <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.29')" title="Copy"></div>
+</div><br>
+<p>Стили для ховер-состояния:</p>
+<div class="kod"><pre id="1.30"><code>
+        .button:hover {
+          background-color: white;
+        }
+ </code></pre>
+ <div class="clipboard"><img src="img/clipboard.png" onclick="Copy('1.30')" title="Copy"></div>
+</div><br>
+<div class="pokaz2 d-flex flex-column justify-content-center align-items-center">
+  <div class="d-flex justify-content-evenly w-75">
+    <div class=" ">Одно свойство</div>
+    <div class=" "><button class=" b1">Кнопка</button></div>
+  </div>
+  <div class="d-flex justify-content-evenly w-75">
+    <div class=" ">&nbsp;&nbsp;&nbsp;&nbsp;Два свойства</div>
+    <div class=" "><button class=" b2">Кнопка</button></div>
+  </div>
+</div>
+<p>Не забывай о том, что вместе с изменяемым свойством обязательно должна указываться длительность изменения .</p>
+  </div></div>
+
+
+  <div id="item-5" class="yrok">
+    <div class="container">
+    <h1>Функции CSS-трансформации</h1>
+
+
+
+</div></div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="scripts/teori.js"></script>
+
+<script type="text/javascript" >
+  function Copy(containerid) {
+        let textarea = document.createElement('textarea');
+        textarea.id = 'temp';
+        textarea.style.height = 0;
+        document.body.appendChild(textarea);
+        textarea.value = document.getElementById(containerid).innerText;
+        let selector = document.querySelector('#temp');
+        selector.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+  }
+  </script>
+</body>
+</html>

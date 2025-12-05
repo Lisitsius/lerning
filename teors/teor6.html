@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content_left">
+            <div class="header">
+                <div class="header_navigation"><a href="../index.html">Главная</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../teori.html">Теория</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../tests.html">Тесты</a></div>
+                <div class="block_right"><h1> Эффекты интерактивности</h1></div>
+            </div>
+            
+            <div class="block_teorii">
+                <div class="zagolovok_teorii"></div>
+                <div class="blok_yroka">
+                    <b><p>Например, при наведении на карточку товара в ней меняется картинка или её форма.</p></b><br><br>
+                    <div class="avatar">
+                        <img src="f.JPG" alt="FireFox">
+                    </div> 
+                    <p>Приступим</p>
+                    <br>
+                    <div class="kod"><pre>
+                        &lt;div class="avatar"&gt;
+                             &lt;img src="f.JPG" alt="FireFox"&gt;
+                        &lt;/div&gt;
+                    </pre></div><br>
+                    <p>Создаем блок и вставляем в него картинку с помощью тега &lt;img&gt;</p>
+                    <p>Атрибут src указывает путь к картинке, а alt устанавливает альтернативный текст для изображений. Такой текст позволяет получить текстовую информацию о рисунке при отключенной в браузере загрузке изображений.</p>
+                    <br><div class="kod"><pre>
+                        .avatar{
+                            text-align: center;
+                          }
+                    </pre></div><br>
+                    <p>Выравниваем картиинку по центру</p>
+                    <br>
+                    <div class="kod"><pre>
+                        img{
+                            width: 50%;
+                          height: 50%;
+                          border-radius: 20px;
+                          border:1px solid black;
+                          filter: grayscale(100%);
+                          transition-duration: 1s;
+                          }
+                          img:hover{
+                            border-radius: 100%;
+                          filter: grayscale(0%);
+                          }
+                    </pre></div><br>
+                    <p>Задаем для изображения ширину и длину, маленький радиус границ для красоты </p>
+                    <p>Что-бы задать черно-белый фильтр используем 'filter: grayscale(100%);'</p>
+                    <p>При наведении радиус границ увеличиваются, а фильтр растворяется</p>
+                </div>
+                
+            </div>
+            <div class="buttons_teors">
+                <a href="teor5.html"><div class="bat">Предыдущий урок</div></a>
+                <a href="../tests/test5.html"><div class="bat2">Тестирование</div></a>
+                <a href="teor7.html"> <div class="bat">Следующий урок</div></a>
+            </div>
+        </div>
+       
+    </div>
+    <div class="cursor"></div>
+                    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px;"+" top: " + e.clientY + "px;";
+        });
+     </script>
+</body>
+</html>

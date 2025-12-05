@@ -1,0 +1,182 @@
+*{
+    margin:0;
+}
+
+
+.circle{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 100px;
+}
+.circle2{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 100px;
+    animation-name: circle-to-square;
+    animation-duration: 5s;
+}
+.circle3{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 100px;
+    animation-name: circle-to-square;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+.circle4{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 100px;
+    animation-name: circle-to-square;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.circle5{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 100px;
+    animation-name: circle-to-square;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+}
+.square2{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+    animation-name: circle-to-square;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+}
+.square3{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+    animation-name: circle-to-square;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+  animation-delay: -2.5s;
+}
+.paus:hover{
+    animation-play-state:paused;
+}
+
+
+.pokaz{
+    background-color: #FE9FF1;
+    height: 250px;
+    padding: 20px;
+    border-radius: 5px;
+  
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.pokaz2{
+    background-color: #FE9FF1;
+    height: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap:10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+   
+}
+.pokaz2 a{
+    color:white;
+    font-size: 20px;
+    padding: 5px;
+}
+.pokaz2 a:hover{
+   background-color: blue;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.tr{
+transition: 1s;
+}
+.ss{
+    height: 20px;
+}
+.delete{
+    width: 13rem;
+}
+
+
+@keyframes circle-to-square {
+    from {
+      width : 150px ;
+      height : 150px ;
+      border-radius : 100px ;
+     }
+     50% {
+     width : 150px ;
+    height : 200px ;
+    border-radius : 10px ;
+   }
+     to {
+      width : 200px ;
+      height : 200px ;
+       border-radius : 10px ;
+    }
+}    
+      
+  .perspective-50 {
+    perspective : 50px ;
+  } 
+  .perspective-100 {
+    perspective : 100px ;
+  } 
+  .transform-rotate-x {
+    background-color : orange ;
+    transform : rotateX(50deg) ;
+  }
+  .transform-rotate-y {
+    background-color : blue ;
+    transform : rotateY(20deg) ;
+  }  
+   
+ .b1{
+  background-color: rgb(149, 149, 252);
+  transition: background-color 0.6s;
+  border-radius: 5px;
+  transform: scale(110%);
+ }       
+ .b1:hover{
+  background-color: white;
+ }
+
+ .b2{
+  background-color: rgb(149, 149, 252);
+  transition: background-color 0.6s;
+  border-radius: 5px;
+  transform: scale(110%);
+  transition: background-color 0.6s, transform 0.5s;
+ }       
+ .b2:hover{
+  background-color: white;
+  transform: scale(130%);
+ }

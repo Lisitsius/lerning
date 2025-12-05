@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content_left">
+            <div class="header">
+                <div class="header_navigation"><a href="../index.html">Главная</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../teori.html">Теория</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../tests.html">Тесты</a></div>
+                <div class="block_right"><h1> Анимация фона</h1></div>
+            </div>
+            
+            <div class="block_teorii">
+                <div class="zagolovok_teorii"></div>
+                <div class="blok_yroka">
+                    <b><p>К анимации бэкграундов и фоновых паттернов относятся: шум, глитч эффекты, параллакс эффекты, различные искажения.</p></b><br><br>
+                    <div class="wrapper parallax">
+                        <div class="parallax-layer parallax-image">
+                          <img class="img" src="https://i.pinimg.com/originals/9e/20/fc/9e20fc9ba2e1456ff29caa6780521cb7.jpg" alt="Сад изящных слов">
+                        </div>
+                        <span class="parallax-layer parallax-text">Сад изящных слов</span>
+                      </div>
+                </div>
+                
+            </div>
+            <div class="buttons_teors">
+                <a href="teor4.html"><div class="bat">Предыдущий урок</div></a>
+                <a href="../tests/test4.html"><div class="bat2">Тестирование</div></a>
+                <a href="teor6.html"> <div class="bat">Следующий урок</div></a>
+            </div>
+        </div>
+       
+    </div>
+    <div class="cursor"></div>
+                    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px;"+" top: " + e.clientY + "px;";
+        });
+     </script>
+</body>
+</html>

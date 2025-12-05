@@ -1,0 +1,351 @@
+*{margin:0;}
+html{
+    overflow-x: hidden;
+    cursor: none;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #B5002E, #95006B);
+}
+.content{
+    max-width: 1700px;
+    
+    margin-inline:auto ;
+    padding-top: 105px;
+    font-size: 32px;
+    display: flex;
+    color: white;
+   
+}
+.header{
+    display: flex;
+    gap: 50px;
+    
+}
+.header_p{
+    height: 37px;
+    width: 2px;
+    background-color: white;
+    border-color: white;
+}
+.zagolovok{
+    margin-top: 170px;
+    font-size: 36px;
+}
+.blok{
+    width: 680px;
+    height: 650px;
+    background-color: #3E3838;
+    border-radius: 60px;
+}
+.slider{
+    position: relative;
+    left: 380px;
+}
+
+
+
+
+
+
+.block_right{
+    position: relative;
+    left: 320px;
+    text-align: center;
+}
+
+.blok_yroka{
+
+    height: 100%;
+    background-color: rgba(62, 56, 56, .9);
+    border-radius: 20px;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 1700px;
+    padding-bottom: 20px;
+}
+.block_teorii{
+    margin-top: 100px;
+    
+}
+
+
+
+
+.zagolovok_teorii{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 54px;
+}
+
+.kod{
+    width: 90%;
+    height: 100%;
+    background-color:white ;
+    color: black;
+    font-size: 20px;
+    margin-inline: auto;
+}
+
+/*2 lessons*/
+
+.lessons_2{
+    background-color: black ;
+    width: 98%;
+    height: 80px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.left_nav{
+    line-height: 80px;
+}
+.right_nav{
+    display: flex;
+    gap: 20px;
+    margin-right: 20px
+}
+
+.nav_button{
+    line-height: 80px;
+    
+}
+.nav_button:hover{
+    cursor: pointer; 
+    animation-duration: 1s;
+    animation-name: slideiin;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideiin {
+    from {
+      
+    }
+  
+    to {
+        background-color: orange;
+    }
+  }
+
+.nav_button_anim{
+    line-height: 80px;
+    height: 80px;
+    width: 50px;
+    overflow:hidden;
+}
+.icons{
+    height: 50px;
+ 
+    vertical-align: middle;
+}
+
+
+
+.nav_button_anim:hover{
+    cursor: pointer; 
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    from {
+      
+      width: 50px;
+    }
+  
+    to {
+        background-color: orange;
+      width: 350px;
+    }
+  }
+
+
+
+  /*3 lessons*/
+
+  .text_anim{
+    position: relative;
+    color: black;
+  }
+  .text_anim::before{
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    width: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    animation: animate 12s linear infinite;
+  }
+  @keyframes animate{
+    0%{
+        width: 0;
+    }
+  100%{
+    width: 100%;
+  }}
+
+
+
+
+
+
+  /*4 lessons*/
+  .ball{
+    width: 200px;
+    height: 200px;
+    background-color:aqua;
+    border-radius: 100px;
+    text-align: center;
+    color: black;
+    line-height: 150px;
+    margin-inline: auto;
+    border:1px solid black;
+    
+  }
+  #les4{
+    transition-duration: 5s;
+  }
+  .ball:hover{
+    cursor: pointer; 
+    
+}
+ 
+
+
+
+
+/*5 lessons*/
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .parallax {
+    position: relative;
+    perspective: 1px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    inset: 0;   
+    height: 100%;
+  }
+  
+  .parallax-image {
+     transform: translateZ(0);
+     object-fit: cover;
+    
+    img {
+      @media(max-width: 768px) {
+          height: calc(100% + 300px);
+          object-fit: cover;
+      }
+    }
+  }
+  
+  .parallax-text {
+    font-size: 72px;
+    color: #cde4f7;
+    transform: translateZ(-2px) translateX(100px) translateY(300px) scale(3);
+    
+    @media (max-width: 768px) {
+      font-size: 62px;
+      transform: translateZ(-2px) translateX(20px) translateY(300px) scale(3);
+      }
+  }
+
+  /*6 lessons*/
+
+  .avatar{
+    img{
+      width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    border:1px solid black;
+    filter: grayscale(100%);
+    transition-duration: 1s;
+    }
+    img:hover{
+      border-radius: 100%;
+    filter: grayscale(0%);
+    }
+    text-align: center;
+    color: black;
+  }
+
+    /*7 lessons*/
+    .content_7less{
+      text-align: center  ;
+    }
+    .cursor{
+      position:fixed;
+      width: 50px;
+      height: 50px;
+      border: 1px solid white;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      pointer-events:none;
+      transform: translate(-50%, -50%);
+      transition: .1s;
+    }
+    .cursor2{
+      position:fixed;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      pointer-events:none;
+      transform: translate(-50%, -50%);
+    }
+
+      /*buttons*/
+
+      .buttons_teors{
+        display: flex;
+        margin-inline: auto;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+      .bat{
+        width: 200px;
+        height: 100px;
+        background-color: #3E3838;
+        border-radius: 20px;
+        padding: 2px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .bat2{
+        width: 200px;
+        height: 100px;
+        background-color: #3E3838;
+        border-radius: 20px;
+        padding: 2px;
+        text-align: center;
+        line-height: 100px;
+      }
+      

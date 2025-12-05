@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content_left">
+            <div class="header">
+                <div class="header_navigation"><a href="../index.html">Главная</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../teori.html">Теория</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../tests.html">Тесты</a></div>
+                <div class="block_right"><h1> Анимация интерфейсов</h1></div>
+            </div>
+            
+            <div class="block_teorii">
+                <div class="zagolovok_teorii"></div>
+                <div class="blok_yroka">
+                    <b><p>Функциональная анимация интерфейсов касается инпутов, элементов навигации, секций, меню, появления уведомлений, pop-up окон, поведения блоков (например, FAQ — анимация по клику, открытие списков, закрытие)</p></b><br><br>
+               
+                    <div class="lessons_2">
+                        <div class="nav">
+                            <div class="left_nav">logotip</div>
+                            <div class="right_nav">
+                                <div class="nav_button">Стать партнером</div>
+                                <div class="nav_button_anim"><img class="icons" src="../img/phone_white.png">8-800-800-88-88</div>
+                                <div class="nav_button_anim"><img  class="icons" src="../img/email_white.png">misterfix @ gmail.com</div>
+                                <div class="nav_button">меню</div>
+                            </div>
+                        </div><br><br>
+                    </div><br><br>
+                    <p>Сейчас мы создадим такое-же навигационное меню как указан в примере. </p><br>
+                        <div class="kod">
+                            <code><pre>
+                                &lt;div class="lessons_2"&gt;
+                                    &lt;div class="nav"&gt;
+                                        &lt;div class="left_nav"&gt;logotip&lt;/div&gt;
+                                        &lt;div class="right_nav"&gt;
+                                            &lt;div class="nav_button"&gt;Стать партнером&lt;/div&gt;
+                                            &lt;div class="nav_button_anim"&gt;&lt;img src="../img/phone_white.png"&gt;8-800-800-88-88&lt;/div&gt;
+                                            &lt;div class="nav_button_anim"&gt;&lt;img src="../img/email_white.png"&gt;misterfix @ gmail.com&lt;/div&gt;
+                                            &lt;div class="nav_button"&gt;меню&lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;</pre>
+                            </code>
+                        
+                        </div><br>
+                    <p>Создаем блок в котором у нас будет меню и назовем класс  "lessons_2"</p>
+                    <p>Зададим цвет фона и размеры</p><br>
+                    <div class="kod"><pre>
+                        .lessons_2{
+                            background-color: black ;
+                            width: 98%;
+                            height: 80px;
+                        }
+                    </pre></div><br>
+                    <p>далее блоку с классом "nav" добавим парочку значений</p><br>
+                    <div class="kod"><pre>
+                        .nav{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    </pre></div><br>
+                    display Задает тип элемента и позволяет менять поведение элемента в потоке, а со значением flex мы превращаем блок в "flexbox" контейнер, который
+                    предоставляет инструменты для быстрого создания сложных, гибких макетов, и функции, которые были сложны в традиционных методах CSS.
+                    <p>При помощи justify-content мы выравниваем внутрилежашие блоки равномерно вдоль оси x</p><br>
+                    <div class="kod"><pre>
+                        .left_nav{
+                            line-height: 80px;
+                        }
+                        .right_nav{
+                            display: flex;
+                            gap: 20px;
+                            margin-right: 20px
+                        }
+                    </pre></div><br>
+                    Создаем те самые внутри лежащие блоки, также правому блоку задаем gap в значение 20px
+                    <p>это означает что между блоками будет отступы в 20 пикселей</p><br><br>
+                    <p>А теперь самое интересное - АНИМАЦИЯ</p><br>
+                    <p>блоки с классом "nav_button" при наведении меняют цвет фона, разберем сначала их</p><br>
+                    <div class="kod"><pre>
+                        .nav_button{
+                            line-height: 80px;
+                        }
+                    </pre></div><br>
+                    line-height устанавливает интерлиньяж (межстрочный интервал) текста, отсчет ведется от базовой линии шрифта
+                    <br><br><div class="kod"><pre>
+                        .nav_button:hover{
+                            cursor: pointer; 
+                            animation-duration: 1s;
+                            animation-name: slideiin;
+                            animation-fill-mode: forwards;
+                        }
+                        @keyframes slideiin {
+                            from {
+                            }
+                            to {
+                                background-color: orange;
+                            }
+                          }
+                    </pre></div><br>
+                    <p>:hover после названия класса указывает на то что эти свойства будут работать при наведении курсора мыши</p>
+                    <p>сursor означает курсор мыши, а со значением pointer курсор изменится как-будто этот объект можно нажать и что-то произойдет </p>
+                    <p>animation-name назначение имени анимации, у нас анимация называется "slideiin"</p>
+                    <p>с помощью animation-duration указываем на длительность анимации</p>
+                    <p>свойство animation-fill-mode определяет, какие стили должны применяться к элементу, когда анимация не проигрывается, в нашем случае forwards позволяет элементу по окончанию анимации применяется стиль последнего ключевого кадра</p>
+                    <p>с помощью @keyframes вызываем анимацию и прописываем имя анимации, указываем какие свойства мы хотим изменить, в нашем случае цвет фона кнопки</p><br><br>
+
+                    <p>Перейдем к блокам с классами "nav_button_anim" в которых при наведении выдвигается дополнительная информация</p>
+                    <br><div class="kod"><pre>
+                        .nav_button_anim{
+                            line-height: 80px;
+                            height: 80px;
+                            width: 50px;
+                            overflow:hidden;
+                        }
+                        img{
+                            height: 50px;
+                         
+                            vertical-align: middle;
+                        }
+                    </pre></div><br>
+                    <p>Задаем межстрочный интервал, а также длину и ширину кнопки до увеличения</p>
+                    <p>Свойство overflow определяет, необходимо ли для ограничения блока элемента обрезать, предусматривать полосы прокрутки или просто отобразить. И со значением hidden контент обрезается</p>
+                    <br><br><p>Далее все так же как и ранее только здесь мы кроме цвета фона изменяем ширину блока</p>
+                    <br><div class="kod"><pre>
+                        .nav_button_anim:hover{
+                            cursor: pointer; 
+                            animation-duration: 1s;
+                            animation-name: slidein;
+                            animation-iteration-count:1;
+                            animation-fill-mode: forwards;
+                        }
+                        @keyframes slidein {
+                            from {
+                              width: 50px;
+                            }
+                            to {
+                                background-color: orange;
+                              width: 350px;
+                            }
+                          }
+                    </pre></div><br>
+                    <p></p>
+                </div>
+            </div>
+            <div class="buttons_teors">
+                <a href="teor1.html"><div class="bat">Предыдущий урок</div></a>
+                <a href="../tests/test1.html"><div class="bat2">Тестирование</div></a>
+                <a href="teor3.html"><div class="bat">Следующий урок</div></a>
+            </div>
+        </div>
+       
+    </div>
+    <div class="cursor"></div>
+                    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px;"+" top: " + e.clientY + "px;";
+        });
+     </script>
+</body>
+</html>

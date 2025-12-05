@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content_left">
+            <div class="header">
+                <div class="header_navigation"><a href="../index.html">Главная</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../teori.html">Теория</a></div>
+                <div class="header_p"></div>
+                <div class="header_navigation"><a href="../tests.html">Тесты</a></div>
+                <div class="block_right"><h1> Анимация курсора</h1></div>
+            </div>
+            
+            <div class="block_teorii">
+                <div class="zagolovok_teorii"></div>
+                <div class="blok_yroka">
+                    <div class="content_7less">
+                        <h1>Cursor Follow on MouseMove</h1>
+                    </div>
+                    <div class="cursor"></div>
+                    <div class="cursor2"></div>
+                    <br>
+                    <p>И наконец пришло время...</p>
+                    <p>Время узнать секрет...</p>
+                    <p>Курсора мышки в этом веб-приложении</p>
+                    <br>
+                    <div class="kod"><pre>
+                        &lt;div class="cursor"&gt;&lt;/div&gt;
+                        &lt;div class="cursor2"&gt;&lt;/div&gt;
+                    </pre></div><br>
+                    <P>Два класса </P>
+                    <br>
+                    <div class="kod"><pre>
+                        .cursor{
+                            position:fixed;
+                            width: 50px;
+                            height: 50px;
+                            border: 1px solid white;
+                            border-radius: 50%;
+                            left: 0;
+                            top: 0;
+                            pointer-events:none;
+                            transform: translate(-50%, -50%);
+                            transition: .1s;
+                          }
+                         
+                    </pre></div><br>
+                    <p>Задаем свойство 'position' со значением 'fixed' что позволяет фиксириовать курсор в одной точке</p>
+                    <p>Настраиваем размер и границу  </p>
+                    <br>
+                    <p>'pointer-events' устанавливает, при каких обстоятельствах (если таковые имеются) конкретный графический элемент может стать целью событий указателя</p>
+                    <p>'transform' позволяет поворачивать, масштабировать, наклонять или сдвигать элемент</p>
+                    <br>
+                    <div class="kod"><pre>
+                        .cursor2{
+                            position:fixed;
+                            width: 8px;
+                            height: 8px;
+                            background-color: white;
+                            border-radius: 50%;
+                            left: 0;
+                            top: 0;
+                            pointer-events:none;
+                            transform: translate(-50%, -50%);
+                          }
+                         
+                    </pre></div><br>
+                    <p>Копируем свойства с предыдущего класса меняя следующие свойства:</p>
+                    <ul>
+                        <li>размер уменьшаем</li>
+                        <li>вместо рамки задаем фоновый цвет</li>
+                    </ul>
+                    <br>
+                    <div class="kod"><pre>
+                        &lt;script&gt;
+                            var cursor = document.querySelector(".cursor");
+                            var cursor2 = document.querySelector(".cursor2");
+                            document.addEventListener("mousemove", function(e){
+                                cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px;"+" top: " + e.clientY + "px;";
+                            });
+                         &lt;/script&gt;
+                         
+                    </pre></div><br>
+                    <p>С помощью javascript создаем 2 переменные которые присваиваем ранее прописанные классы</p>
+                    <p>Также не без помощи javascript присваиваем нахождение мышки в ранее прописанные классы</p>
+                </div>
+                
+            </div>
+            <div class="buttons_teors">
+                <a href="teor6.html"><div class="bat">Предыдущий урок</div></a>
+                <a href="../tests/test6.html"><div class="bat2">Тестирование</div></a>
+            </div>
+        </div>
+       
+    </div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px;"+" top: " + e.clientY + "px;";
+        });
+     </script>
+</body>
+</html>
